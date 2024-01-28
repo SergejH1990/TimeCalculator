@@ -6,8 +6,12 @@ import androidx.lifecycle.ViewModel
 
 class CalculatorViewModel : ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "300y 12mo 51w 6d 23h 59m 59s"
+    private val _yearsText = MutableLiveData<String>().apply {
+        value = "300y 12mo 51w"
     }
-    val text: LiveData<String> = _text
+    private val _daysText = MutableLiveData<String>().apply {
+        value = "6d 23h 59m 59s"
+    }
+    val yearText: LiveData<String> = _yearsText
+    val daysText: LiveData<String> = _daysText
 }

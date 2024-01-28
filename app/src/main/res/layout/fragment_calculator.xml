@@ -6,29 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".ui.calculator.CalculatorFragment">
 
-    <TextView
-        android:id="@+id/text_calculator"
+    <com.sermut.timecalculator.views.TimeCalculatorTextView
+        android:id="@+id/time_calculator"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="0dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:textColor="@color/white"
+        android:layout_height="100dp"
         android:background="@color/teal_700"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="@id/time_calculator1"
+        tools:layout_editor_absoluteX="0dp" />
 
-    <TextView
-        android:id="@+id/text_calculator1"
+    <com.sermut.timecalculator.views.TimeCalculatorTextView
+        android:id="@+id/time_calculator1"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="100dp"
         android:background="@color/teal_200"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_calculator" />
+        app:layout_constraintTop_toBottomOf="@id/time_calculator" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
