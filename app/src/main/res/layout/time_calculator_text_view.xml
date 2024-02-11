@@ -6,24 +6,37 @@
     android:layout_height="match_parent"
     tools:context=".views.TimeCalculatorTextView">
 
-        <TextView
-            android:id="@+id/years_text_view"
+        <LinearLayout
+            android:id="@+id/years_linear_layout"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="0dp"
-            android:layout_marginLeft="50dp"
-            android:textAlignment="center"
-            android:textSize="20sp"
-            android:textColor="@color/white"
-            app:layout_constraintBottom_toTopOf="@+id/days_linear_layout"/>
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/days_linear_layout">
+
+            <View
+                android:id="@+id/years_space"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@color/black"/>
+
+            <TextView
+                android:id="@+id/years_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="0dp"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toTopOf="@+id/days_linear_layout"/>
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/days_linear_layout"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@+id/years_text_view">
+            app:layout_constraintTop_toBottomOf="@+id/years_linear_layout">
 
             <CheckBox
                 android:id="@+id/years_checkbox"

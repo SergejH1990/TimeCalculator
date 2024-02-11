@@ -17,27 +17,25 @@ class CalculatorFragment : Fragment()
     // onDestroyView.
     private val binding get() = _binding!!
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?): View 
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View
     {
         val calculatorViewModel = ViewModelProvider(this).get(CalculatorViewModel::class.java)
 
         _binding = FragmentCalculatorBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TimeCalculatorTextView = binding.timeCalculator
-        val textView1: TimeCalculatorTextView = binding.timeCalculator1
+        val entryTimCalculatorTextView: TimeCalculatorTextView = binding.entryTimeCalculator
+        val resultTimeCalculatorTextView: TimeCalculatorTextView = binding.resultTimeCalculator
+
         calculatorViewModel.yearText.observe(viewLifecycleOwner)
         {
-            textView.yearsTextView?.text = it
-            textView1.yearsTextView?.text = it
+            entryTimCalculatorTextView.yearsTextView?.text = it
+            resultTimeCalculatorTextView.yearsTextView?.text = it
         }
         calculatorViewModel.daysText.observe(viewLifecycleOwner)
         {
-            textView.daysTextView?.text = it
-            textView1.daysTextView?.text = it
+            entryTimCalculatorTextView.daysTextView?.text = it
+            resultTimeCalculatorTextView.daysTextView?.text = it
         }
 
         return root

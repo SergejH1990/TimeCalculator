@@ -17,13 +17,9 @@ class CalendarFragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        val calendarViewModel =
-            ViewModelProvider(this).get(CalendarViewModel::class.java)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View
+    {
+        val calendarViewModel = ViewModelProvider(this).get(CalendarViewModel::class.java)
 
         _binding = FragmentCalendarBinding.inflate(inflater, container, false)
         val root: View = binding.root
