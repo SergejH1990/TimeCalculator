@@ -31,7 +31,6 @@ class TimeCalculatorTextView : LinearLayout
 
         yearsLinearLayout = findViewById(R.id.years_linear_layout)
         yearsLinearLayout?.visibility = View.GONE
-        
 
         yearsTextView = findViewById(R.id.years_text_view)
         yearsCheckBox = findViewById(R.id.years_checkbox)
