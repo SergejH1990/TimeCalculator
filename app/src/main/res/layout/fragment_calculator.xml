@@ -6,18 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".ui.calculator.CalculatorFragment">
 
-    <com.sermut.timecalculator.views.TimeCalculatorTextView
-        android:id="@+id/entry_time_calculator"
+    <com.sermut.timecalculator.views.TimeCalculatorView
+        android:id="@+id/time_calculator"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/teal_700"
-        app:layout_constraintBottom_toTopOf="@id/result_time_calculator" />
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/result_calculator_text" />
 
     <com.sermut.timecalculator.views.TimeCalculatorTextView
-        android:id="@+id/result_time_calculator"
+        android:id="@+id/result_calculator_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/teal_200"
-        app:layout_constraintTop_toBottomOf="@id/entry_time_calculator" />
+        app:layout_constraintTop_toBottomOf="@id/time_calculator"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

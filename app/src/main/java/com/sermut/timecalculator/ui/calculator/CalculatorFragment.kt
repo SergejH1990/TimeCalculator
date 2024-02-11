@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.sermut.timecalculator.databinding.FragmentCalculatorBinding
 import com.sermut.timecalculator.views.TimeCalculatorTextView
+import com.sermut.timecalculator.views.TimeCalculatorView
 
 class CalculatorFragment : Fragment()
 {
@@ -24,17 +25,17 @@ class CalculatorFragment : Fragment()
         _binding = FragmentCalculatorBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val entryTimCalculatorTextView: TimeCalculatorTextView = binding.entryTimeCalculator
-        val resultTimeCalculatorTextView: TimeCalculatorTextView = binding.resultTimeCalculator
+        val timCalculator: TimeCalculatorView = binding.timeCalculator
+        val resultTimeCalculatorTextView: TimeCalculatorTextView = binding.resultCalculatorText
 
         calculatorViewModel.yearText.observe(viewLifecycleOwner)
         {
-            entryTimCalculatorTextView.yearsTextView?.text = it
+            timCalculator.entryCalculatorTextView?.yearsTextView?.text = it
             resultTimeCalculatorTextView.yearsTextView?.text = it
         }
         calculatorViewModel.daysText.observe(viewLifecycleOwner)
         {
-            entryTimCalculatorTextView.daysTextView?.text = it
+            timCalculator.entryCalculatorTextView?.daysTextView?.text = it
             resultTimeCalculatorTextView.daysTextView?.text = it
         }
 
